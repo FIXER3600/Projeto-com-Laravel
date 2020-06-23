@@ -26,3 +26,6 @@ $umUsuarioQualquer->password = '123';
 $umUsuarioQualquer->save(); }
 return User::all(); 
 });
+
+Route::get('FormTarefaDeBackup', 'TarefaDeBackupController@create')->name('FormTarefaDeBackup.create');
+Route::post('FormTarefaDeBackup', 'TarefaDeBackupController@store')->name('FormTarefaDeBackup.store');
