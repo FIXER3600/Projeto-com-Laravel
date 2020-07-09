@@ -19,9 +19,9 @@ Route::get('/userlist',
 function () {
 
 $umUsuarioQualquer = new User;
-$umUsuarioQualquer->name = 'umUser'.$contador;
+$umUsuarioQualquer->name = 'umUser';
 $timestamp = date("Y-m-d-h-i-sa");
-$umUsuarioQualquer->email = "email".$contador."@emailTeste.com".$timestamp;
+$umUsuarioQualquer->email = "email"."@emailTeste.com".$timestamp;
 $umUsuarioQualquer->password = '123';
 $umUsuarioQualquer->save(); 
 return User::all(); 
