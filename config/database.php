@@ -15,7 +15,8 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'pgsql'),
+    'default' => env('DB_CONNECTION', 'sdfg'),
+	
 
     /*
     |--------------------------------------------------------------------------
@@ -38,7 +39,7 @@ return [
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DATABASE_URL'),
-            'database' => env('DB_DATABASE', database_path('database.sqlite')),
+            'database' => database_path('database.sqlite'),
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
@@ -65,12 +66,13 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+          //  'url' => env('DATABASE_URL'),
+          'url' => 'postgres://ojxsoluvrqpdrd:7b401a5cfa22d5d11cad1a4e4ec8fd867b6e7755cb21992585da24e2ee77801a@ec2-184-72-236-57.compute-1.amazonaws.com:5432/d5isqov4fmo8vs',
+            'host' => 'ec2-184-72-236-57.compute-1.amazonaws.com',
+            'port' => '5432',
+            'database' => 'd5isqov4fmo8vs',
+            'username' => 'ojxsoluvrqpdrd',
+            'password' => '7b401a5cfa22d5d11cad1a4e4ec8fd867b6e7755cb21992585da24e2ee77801a',
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
