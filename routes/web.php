@@ -13,15 +13,16 @@ use Illuminate\Support\Facades\Route; use App\User;
 |
 */
 
-Route::get('/', function () { return view('welcome'); });
+Route::get('/', function () {
+     return view('welcome'); 
+    });
 
-Route::get('/userlist', 
-function () {
+Route::get('/userlist', function () {
 
 $umUsuarioQualquer = new User;
-$umUsuarioQualquer->name = 'umUser';
+$umUsuarioQualquer->name = 'aUserName';
 $timestamp = date("Y-m-d-h-i-sa");
-$umUsuarioQualquer->email = "email"."@emailTeste.com".$timestamp;
+$umUsuarioQualquer->email = "adsf@asdf.com".$timestamp;
 $umUsuarioQualquer->password = '123';
 $umUsuarioQualquer->save(); 
 return User::all(); 
