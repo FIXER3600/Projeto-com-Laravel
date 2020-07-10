@@ -29,6 +29,6 @@ class TarefaDeBackupController extends Controller
         
         //$show = TarefaDeBackupController::create($dadosValidados);
 
-        return redirect()->back()->with('success', 'Tarefa de Backup Sava com Sucesso');        
+        return redirect()->back()->with('success', 'Tarefa de Backup Salva com Sucesso');        
     }
 }
